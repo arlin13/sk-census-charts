@@ -1,28 +1,29 @@
 {
-    "name": "census-charts",
-    "private": true,
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "dependencies": {
-        "angular": "^1.6.3",
-        "bootstrap": "^3.3.7",
-        "angular-chart.js": "^1.1.1",
-        "font-awesome": "^4.7.0"
+  "name": "census-charts",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3",
+    "bootstrap": "^3.3.7",
+    "angular-chart.js": "^1.1.1",
+    "font-awesome": "^4.7.0",
+    "angular-charts": "^0.2.7"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": "css/font-awesome.css"
     },
-    "overrides": {
-        "font-awesome": {
-            "main": "css/font-awesome.css"
-        },
-        "bootstrap": {
-            "main": [
-                "dist/css/bootstrap.css",
-                "dist/js/bootstrap.js"
-            ]
-        }
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
     }
+  }
 }

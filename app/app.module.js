@@ -4,6 +4,9 @@
   /* -- STEP 0 - READING --
     1. Go read the INQStats API blog post and learn how the API we'll be using works.
     http://blog.inqubu.com/inqstats-open-api-published-to-get-demographic-data
+      Ex: GET http://inqstatsapi.inqubu.com?api_key=ADDYOURKEYHERE&data=population&countries=us,gb
+      My key: 53033d30d2b47238
+      My-Ex: http://inqstatsapi.inqubu.com?api_key=53033d30d2b47238&data=population&countries=us,gb
 
     2. Go read this blog post on dependency injection in AngularJS.
     http://anandmanisankar.com/posts/angularjs-dependency-injection-demystified/
@@ -24,5 +27,5 @@
 
   angular
     .module('app', ['chart.js'])
-    .value('inqstatsApiKey', '');
+    .value('inqstatsApiKey', '53033d30d2b47238');
 })();
