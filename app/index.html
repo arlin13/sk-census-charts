@@ -1,38 +1,49 @@
 <!doctype html>
 <html ng-app="app">
 
-    <head>
-        <!-- bower:css -->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
-        <!-- endbower -->
+<head>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
 
-        <!-- inject:css -->
-        <!-- endinject -->
-    </head>
+    <!-- inject:css -->
+    <!-- endinject -->
+</head>
 
-    <body ng-controller="ChartsController as chartsCtrl">
+<body ng-controller="ChartsController as chartsCtrl">
 
-        <div class='container'>
-          <div class='jumbotron'>
+    <div class='container'>
+        <div class='jumbotron'>
             <h1>The State of the United States</h1>
             <p class='lead'>See census data from 2007-2015</p>
-          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Big Mac Index</h4>
+                <canvas id="line" class="chart chart-line" chart-data="chartsCtrl.bigMac.data" chart-labels="chartsCtrl.bigMac.labels"></canvas>
+            </div>
+            <div class="col-md-4">
+                <h4>Birth Rate</h4>
 
-          <!-- STEP 6 - BUILDING THE UI -->
-          <!--
-          I have setup most of the page and Gulp stuff for you. Your job is to
-          build the grid of charts as shown in the example image.
+            </div>
+            <div class="col-md-4">
+                <h4>CO2 Emissions</h4>
 
-          I recommend reading this W3Schools article on the Bootstrap Grid System first.
-          https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp
+            </div>
+            <div class="col-md-4">
+                <h4>Death Rate</h4>
+            </div>
+            <div class="col-md-4">
+                <h4>Corruption Index</h4>
+            </div>
+            <div class="col-md-4">
+                <h4>Population Density</h4>
+            </div>
+        </div>
 
-          Build a 1 row, 3 column bootstrap grid.
-          Inside the first column:
-            - Add an h1 element for the graph title
-            - Insert the HTML for an Angular Line Chart underneath.
-              (You can find the example HTML here: http://jtblin.github.io/angular-chart.js/)
-
+        <!-- STEP 6 - BUILDING THE UI -->
+        <!--
               You will need to pass `chartsCtrl.bigMac.data` to the `chart-data` directive,
               and `chartsCtrl.bigMac.labels` to the `chart-labels` directive.
 
@@ -76,23 +87,24 @@
 
            -->
 
-        </div>
+    </div>
 
-        <!-- bower:js -->
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="bower_components/chart.js/dist/Chart.js"></script>
-        <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
-        <script src="bower_components/d3/d3.js"></script>
-        <script src="bower_components/angular-charts/dist/angular-charts.js"></script>
-        <!-- endbower -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/chart.js/dist/Chart.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/angular-charts/dist/angular-charts.js"></script>
+    <!-- endbower -->
 
-        <!-- inject:js -->
-        <script src="app.module.js"></script>
-        <script src="charts/charts.controller.js"></script>
-        <script src="charts/inqstats.factory.js"></script>
-        <!-- endinject -->
-    </body>
+    <!-- inject:js -->
+    <!-- <script type="text/javascript" src="../style.css"></script> -->
+    <script src="app.module.js"></script>
+    <script src="charts/charts.controller.js"></script>
+    <script src="charts/inqstats.factory.js"></script>
+    <!-- endinject -->
+</body>
 
 </html>
